@@ -4,5 +4,8 @@ node default{
     content => 'this is a readme - mtk',
     owner   => 'root',
   }
+}
 
+node 'master.puppet.vm' {
+  include role::master_server
 }
