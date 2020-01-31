@@ -1,4 +1,2 @@
 # control_repo
-Puppet course
-
-Making a change here...
+test files for lynda.com course Learning Puppet by Josh Samuelson
