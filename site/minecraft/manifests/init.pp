@@ -8,6 +8,7 @@ class minecraft {
   }
   package {'java':
     ensure => present,
+    before => Service['minecraft'],
   }
   file {'/opt/minecraft/eula.txt':
     ensure => file,
@@ -20,5 +21,6 @@ class minecraft {
   service {'minecraft':
     ensure => running,
     enable => true,
+    require => [Package['java'],File['/opt/minecraft/eula.txt'],File['/etc/systemd/system/minecraft.service']],
   }
 }
